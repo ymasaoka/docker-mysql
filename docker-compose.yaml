@@ -19,3 +19,9 @@ services:
     volumes:
         - ./data/mysql:/var/lib/mysql
         - ./conf:/etc/mysql/conf.d
+
+  adminer:
+    image: adminer:4-standalone
+    restart: always
+    ports:
+      - 8080:8080
